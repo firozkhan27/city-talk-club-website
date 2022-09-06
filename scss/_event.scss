@@ -1,0 +1,328 @@
+/*
+.event-container {
+    display:flex;
+    flex-direction:column;
+    width: 100%;
+    height: 640px;
+    background: $dark-red;
+    margin-top: 150px;
+    border-radius: 20px;
+}
+
+.event-head {
+    position: relative;
+    display: flex;
+    flex-flow:row;
+    margin:0px auto;
+    width:90%;
+    height:15%;
+    background-color:$dark-red;
+    
+    h3 {
+        letter-spacing:0.5px;
+        font-size:2rem;
+        margin:auto;
+    }
+}
+
+.event-body {
+    display:flex;
+    flex-direction:row;
+    margin:0px auto;
+    
+    width:95%;
+    height: 85%;
+    background: $dark-red;
+    border-radius: 10%;
+}
+
+.event-image {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:40%;
+    height:100%;
+    background-color:$dark-red;
+    
+    img {
+        width:90%;
+        height: 90%;
+        overflow:hidden;
+        border-radius:10px;
+    }
+}
+
+.event-text {
+    padding-top:20px;
+    width:60%;
+    height:100%;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    background-color: $dark-red;
+    margin:0px auto;
+    h2{
+        margin:15px auto;
+        letter-spacing:0px;
+        text-align:center;
+    }
+    p {
+        width:90%;
+        text-align:justify;
+    }
+}
+*/
+
+.event-heading {
+  width: 100%;
+  height: 60px;
+  background: white;
+  margin-top: 120px;
+  text-align: center;
+}
+.event-container {
+  //   display: grid;
+  //   height: 640px;
+  width: 100%;
+  grid-template-areas:
+    'title title'
+    'intro intro'
+    'speaker1 speaker2'
+    'details details';
+  background: $dark-red;
+  border-radius: 20px;
+  margin: 0px auto;
+  margin-top: 30px;
+  padding-top: 25px;
+}
+
+.event-container > div {
+  padding: 10px 15px;
+}
+
+.event-head {
+  grid-area: title;
+  text-align: center;
+  letter-spacing: 0px;
+}
+
+.event-intro {
+  grid-area: intro;
+  text-align: center;
+}
+
+.event-speaker1 {
+  grid-area: speaker1;
+  background-color: $dark-grey;
+  align-content: center;
+  img {
+    width: 25%;
+    float: left;
+    padding-right: 10px;
+  }
+}
+
+.event-speaker2 {
+  grid-area: speaker2;
+  background-color: grey;
+  img {
+    width: 25%;
+    float: left;
+    padding-right: 10px;
+  }
+}
+
+.event-details {
+  grid-area: details;
+  text-align: center;
+}
+
+//   single event speaker
+
+.event-speaker-single {
+  background-color: $dark-grey;
+  width: 100%;
+
+  .event-speaker3 {
+    padding: 1.5rem 0;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    @include flex(flex, column, center, center);
+    img {
+      width: 16%;
+    }
+    .name {
+      font-size: 22px;
+      line-height: auto;
+      letter-spacing: 0px;
+      font-weight: bold;
+      padding: 0.6rem;
+    }
+    p {
+      font-size: 18px;
+      width: 50%;
+    }
+  }
+}
+
+.event-container {
+  margin: 0 0 30px 0;
+  padding: 25px 0;
+  @include flex(flex, column, center, center);
+  width: 100%;
+  .event-head {
+    width: 90%;
+    h2 {
+      font-size: 33px;
+      letter-spacing: 0.6px;
+    }
+  }
+  .event-intro {
+    width: 91%;
+    font-size: 18px;
+    p {
+      letter-spacing: 0.6px;
+    }
+  }
+  .event-details {
+    @include flex(flex, column, center, center);
+    p {
+      font-size: 18px;
+      width: 85%;
+      letter-spacing: 0.6px;
+    }
+    .event-details-p {
+      padding: 6px 0;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .event-heading {
+    width: 100%;
+    height: 60px;
+    background: white;
+    margin-top: 100px;
+    text-align: center;
+  }
+  .event-container {
+    width: 100%;
+    background: $dark-red;
+    border-radius: 20px;
+  }
+
+  .event-container > div {
+    padding: 10px 15px;
+  }
+
+  .event-head {
+    grid-area: title;
+    text-align: center;
+    letter-spacing: 0px;
+    h2 {
+      font-size: 27px;
+      line-height: 35px;
+    }
+  }
+
+  .event-intro {
+    grid-area: intro;
+    text-align: center;
+  }
+
+  .event-speaker1 {
+    grid-area: speaker1;
+    background-color: $dark-grey;
+    align-content: center;
+    img {
+      width: 25%;
+      float: left;
+      padding-right: 10px;
+    }
+  }
+  .name {
+    padding-top: 10px;
+  }
+  .awards {
+    text-align: center;
+    width: 70%;
+  }
+
+  .event-speaker2 {
+    grid-area: speaker2;
+    background-color: grey;
+    img {
+      width: 25%;
+      float: right;
+      padding-left: 10px;
+    }
+  }
+
+  .event-details p {
+    text-align: center;
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .event-heading {
+    height: fit-content;
+    margin-top: 80px;
+    h2 {
+      font-size: 25px;
+    }
+  }
+
+  .event-container {
+    margin: 20px 0;
+  }
+  .event-container > .event-speaker1,
+  .event-speaker2 {
+    padding: 15px;
+  }
+  .event-head {
+    width: 100%;
+    h2 {
+      font-size: 18px !important;
+      letter-spacing: normal;
+      line-height: normal;
+      width: 100%;
+    }
+  }
+  .event-intro p {
+    font-size: 13px;
+    line-height: normal;
+  }
+  .name {
+    padding-top: 10px;
+  }
+  .awards {
+    padding-top: 10px;
+    font-size: 13px !important;
+    line-height: 18px;
+    width: 80% !important;
+    text-align: center;
+  }
+  .event-speaker1 {
+    grid-area: speaker1;
+  }
+  .event-speaker2 {
+    grid-area: speaker2;
+    img {
+      width: 25%;
+      float: right;
+      padding-left: 10px;
+    }
+  }
+  .event-details p {
+    font-size: 13px !important;
+    line-height: 18px;
+    width: 90% !important;
+    text-align: center;
+  }
+  .event-speaker3 img {
+    width: 30% !important;
+  }
+}

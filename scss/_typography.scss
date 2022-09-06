@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  font-family: 'Spartan';
+  font-style: normal;
+  letter-spacing: 0px;
+  font-weight: 400;
+  color: white;
+}
+
+body {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 48px;
+  line-height: 48px;
+}
+
+h1.little-h1 {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: 2px;
+}
+
+h3 {
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: 5px;
+}
+
+h4 {
+  font-size: 15px;
+  line-height: 22px;
+  letter-spacing: 5px;
+}
+
+input,
+textarea {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 26px;
+  opacity: 1;
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 26px;
+  opacity: 0.5;
+  color: white;
+}
+
+.nav-links {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 2px;
+}
+
+.nav-links-mobile {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 2px;
+}
+
+.black {
+  color: $dark-grey;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.red {
+  color: $red;
+}
+
+.opacity05 {
+  opacity: 0.5;
+}
+
+.italic {
+  font-style: italic;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 15px;
+    line-height: 25px;
+  }
+
+  h1 {
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  h2 {
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: 1.399999976158142px;
+  }
+
+  h1.little-h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
